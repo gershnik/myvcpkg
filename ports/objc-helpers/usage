@@ -1,0 +1,4 @@
+objc-helpers is header-only and can be used from CMake via:
+
+  find_path(OBJC_HELPERS_INCLUDE_DIRS "objc-helpers/NSObjectUtil.h" REQUIRED)
+  target_include_directories(main PRIVATE ${OBJC_HELPERS_INCLUDE_DIRS})

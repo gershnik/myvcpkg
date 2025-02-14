@@ -1,0 +1,17 @@
+{
+  "name": "objc-helpers",
+  "version": "3.1",
+  "description": "Utilities to make coding on Apple platforms in C++ or ObjectiveC++ more pleasant.",
+  "homepage": "https://github.com/gershnik/objc-helpers",
+  "license": "BSD-3-Clause",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}

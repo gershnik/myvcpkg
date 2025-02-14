@@ -1,0 +1,17 @@
+{
+  "name": "argum",
+  "version": "2.6",
+  "description": "Fully-featured, powerful, command line argument parser in C++20.",
+  "homepage": "https://github.com/gershnik/argum",
+  "license": "BSD-3-Clause",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}

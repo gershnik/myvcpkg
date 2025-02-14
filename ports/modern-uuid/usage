@@ -1,0 +1,4 @@
+modern-uuid provides CMake targets:
+
+  find_package(modern-uuid CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE modern-uuid::modern-uuid)

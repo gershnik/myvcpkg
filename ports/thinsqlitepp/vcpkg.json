@@ -1,0 +1,17 @@
+{
+  "name": "thinsqlitepp",
+  "version": "1.5",
+  "description": "A thin, safe and convenient C++ wrapper for SQLite API.",
+  "homepage": "https://github.com/gershnik/thinsqlitepp",
+  "license": "BSD-3-Clause",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}

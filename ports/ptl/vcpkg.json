@@ -1,0 +1,17 @@
+{
+  "name": "ptl",
+  "version": "1.5",
+  "description": "C++ library for Posix and related calls.",
+  "homepage": "https://github.com/gershnik/ptl",
+  "license": "BSD-3-Clause",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}
