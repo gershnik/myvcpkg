@@ -3,7 +3,7 @@ I have published on Github.
 
 To add it to your configuration add this to the `registries` field in your `vcpkg-configuration.json`
 
-```json
+```
 "registries": [
   ...
   {
