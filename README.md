@@ -22,7 +22,7 @@ To add it to your configuration add this to the `registries` field in your `vcpk
 
 Where available library names are:
 
-|                   Name                                                  |   Description 
+|   Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      |   Description 
 |-------------------------------------------------------------------------|----------------------------------
 |<nobr>["argum"](https://github.com/gershnik/argum)</nobr>                | Fully-featured, powerful, command line argument parser in C++20.
 |<nobr>["isptr"](https://github.com/gershnik/intrusive_shared_ptr)</nobr> | Intrusive reference counting smart pointer, highly configurable reference counted base class and various adapters.
