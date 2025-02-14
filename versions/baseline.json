@@ -1,7 +1,31 @@
 {
   "default": {
+    "argum": {
+      "baseline": "2.6",
+      "port-version": 0
+    },
+    "libuuid": {
+      "baseline": "2.40.4",
+      "port-version": 0
+    },
+    "modern-uuid": {
+      "baseline": "1.2",
+      "port-version": 0
+    },
+    "objc-helpers": {
+      "baseline": "3.1",
+      "port-version": 0
+    },
+    "ptl": {
+      "baseline": "1.5",
+      "port-version": 0
+    },
     "sys-string": {
       "baseline": "3.2",
+      "port-version": 0
+    },
+    "thinsqlitepp": {
+      "baseline": "1.5",
       "port-version": 0
     }
   }
