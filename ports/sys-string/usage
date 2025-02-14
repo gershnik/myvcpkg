@@ -1,0 +1,4 @@
+sys-string provides CMake targets:
+
+  find_package(sys_string CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE sys_string::sys_string)
