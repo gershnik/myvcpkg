@@ -1,0 +1,62 @@
+#! /usr/bin/env -S python3 -u
+
+import os
+import sys
+import argparse
+import subprocess
+import re
+
+from pathlib import Path
+
+MYPATH = Path(__file__).parent
+ROOT = MYPATH.parent
+VCPKG_ROOT = os.environ.get('VCPKG_ROOT')
+
+def is_anything_staged():
+    proc = subprocess.run(['git', 'diff', '--cached', '--quiet'], cwd=ROOT, check=False)
+    return proc.returncode != 0
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('message', help='main commit message')
+    args = parser.parse_args()
+
+    message: str = args.message
+
+    if VCPKG_ROOT is None:
+        print('VCPKG_ROOT environment variable not set', file=sys.stderr)
+        sys.exit(1)
+
+    if is_anything_staged():
+        print("You have staged changes, update cannot be performed", file=sys.stderr)
+        sys.exit(1)
+    subprocess.run(['git', 'add', 'ports/.'], cwd=ROOT, check=True)
+    if not is_anything_staged():
+        print("Nothing to update")
+        sys.exit(0)
+    subprocess.run(['git', 'commit', '-m', message], cwd=ROOT, check=True)
+    subprocess.run([Path(VCPKG_ROOT) / 'vcpkg', 
+                    '--x-builtin-ports-root=./ports', 
+                    '--x-builtin-registry-versions-dir=./versions', 
+                    'x-add-version', '--all', '--verbose'], cwd=ROOT, check=True)
+    subprocess.run(['git', 'add', 'versions/.'], cwd=ROOT, check=True)
+    subprocess.run(['git', 'commit', '-m', 'Updating versions'], cwd=ROOT, check=True)
+
+    rev = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, 
+                         stdout=subprocess.PIPE, check=True).stdout.decode('utf-8').strip()
+
+    baseline_pattern = re.compile(r'(^\s+"baseline"\s*:\s*")[a-z0-9]+("\s*,\s*$)', re.DOTALL)
+    lines = []
+    with open(ROOT / 'README.md', 'rt', encoding='utf-8') as readme:
+        for line in readme.readlines():
+            if (m := baseline_pattern.fullmatch(line)):
+                line = m.group(1) + rev + m.group(2)
+            lines.append(line)
+    
+    with open(ROOT / 'README.md', 'wt', encoding='utf-8') as readme:
+        readme.writelines(lines)
+    subprocess.run(['git', 'add', ROOT / 'README.md'], cwd=ROOT, check=True)
+    subprocess.run(['git', 'commit', '-m', 'Updating README'], cwd=ROOT, check=True)
+
+if __name__ == '__main__':
+    main()
