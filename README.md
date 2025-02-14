@@ -22,14 +22,46 @@ To add it to your configuration add this to the `registries` field in your `vcpk
 
 Where available library names are:
 
-|   Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      |   Description 
-|-------------------------------------------------------------------------|----------------------------------
-|<nobr>["argum"](https://github.com/gershnik/argum)</nobr>                | Fully-featured, powerful, command line argument parser in C++20.
-|<nobr>["isptr"](https://github.com/gershnik/intrusive_shared_ptr)</nobr> | Intrusive reference counting smart pointer, highly configurable reference counted base class and various adapters.
-|<nobr>["libuuid"](https://github.com/gershnik/libuuid-cmake)</nobr>      | Universally unique id library from util-linux.
-|<nobr>["modern-uuid"](https://github.com/gershnik/modern-uuid)</nobr>    | A modern, no-dependencies, portable C++ library for manipulating UUIDs. Fully supports RFC 9562 and RFC 4122.
-|<nobr>["objc-helpers"](https://github.com/gershnik/objc-helpers)</nobr>  | Utilities to make coding on Apple platforms in C++ or ObjectiveC++ more pleasant.
-|<nobr>["ptl"](https://github.com/gershnik/ptl)</nobr>                    | C++ library for Posix and related calls.
-|<nobr>["sys-string"](https://github.com/gershnik/sys_string)</nobr>      | A family of C++ string classes optimized for interoperability with platform-native string types.
-|<nobr>["thinsqlitepp"](https://github.com/gershnik/thinsqlitepp)</nobr>  | A thin, safe and convenient C++ wrapper for SQLite API.
+<br><table width="100%">
+    <thead>
+      <tr>
+        <th width="20%">Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>["argum"](https://github.com/gershnik/argum)</td>
+        <td>Fully-featured, powerful, command line argument parser in C++20.</td>
+      </tr>
+      <tr>
+        <td>["isptr"](https://github.com/gershnik/intrusive_shared_ptr)</td>
+        <td>Intrusive reference counting smart pointer, highly configurable reference counted base class and various adapters.</td>
+      </tr>
+      <tr>
+        <td>["libuuid"](https://github.com/gershnik/libuuid-cmake)</th>
+        <td>Universally unique id library from util-linux.</td>
+      </tr>
+      <tr>
+        <td>["modern-uuid"](https://github.com/gershnik/modern-uuid)</td>
+        <td>A modern, no-dependencies, portable C++ library for manipulating UUIDs. Fully supports RFC 9562 and RFC 4122.</td>
+      </tr>
+      <tr>
+        <td>["objc-helpers"](https://github.com/gershnik/objc-helpers)</td>
+        <td>Utilities to make coding on Apple platforms in C++ or ObjectiveC++ more pleasant.</td>
+      </tr>
+      <tr>
+        <td>["ptl"](https://github.com/gershnik/ptl)</td>
+        <td>C++ library for Posix and related calls.</td>
+      </tr>
+      <tr>
+        <td>["sys-string"](https://github.com/gershnik/sys_string)</td>
+        <td>A family of C++ string classes optimized for interoperability with platform-native string types.</td>
+      </tr>
+      <tr>
+        <td>["thinsqlitepp"](https://github.com/gershnik/thinsqlitepp)</td>
+        <td>A thin, safe and convenient C++ wrapper for SQLite API.</td>
+      </tr>
+    </tbody>
+</table>
 
