@@ -1,3 +1,8 @@
 {
-  "default": {}
+  "default": {
+    "sys-string": {
+      "baseline": "3.2",
+      "port-version": 0
+    }
+  }
 }
