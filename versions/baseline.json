@@ -4,6 +4,10 @@
       "baseline": "2.6",
       "port-version": 0
     },
+    "isptr": {
+      "baseline": "1.6",
+      "port-version": 0
+    },
     "libuuid": {
       "baseline": "2.40.4",
       "port-version": 0
