@@ -24,6 +24,10 @@
       "baseline": "1.5",
       "port-version": 0
     },
+    "smjni": {
+      "baseline": "3.12",
+      "port-version": 0
+    },
     "sys-string": {
       "baseline": "3.2",
       "port-version": 0
