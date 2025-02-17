@@ -10,7 +10,7 @@ To add it to your configuration add this to the `registries` field in your `vcpk
     "kind": "git",
     "reference": "master",
     "repository": "https://github.com/gershnik/myvcpkg",
-    "baseline": "06207ebd114c0c30442c05dfd31d36068f3d3038",
+    "baseline": "c2c7de372084b7b9471fab8c106862f8a7aebc31",
     "packages": [ 
         "library name 1", 
         "library name 2", 
@@ -53,6 +53,10 @@ Where available library names are:
       <tr>
         <td>["ptl"](https://github.com/gershnik/ptl)</td>
         <td>C++ library for Posix and related calls.</td>
+      </tr>
+      <tr>
+        <td>["smjni"](https://github.com/gershnik/SimpleJNI)</td>
+        <td>A powerful lightweight C++ wrapper for JNI.</td>
       </tr>
       <tr>
         <td>["sys-string"](https://github.com/gershnik/sys_string)</td>
