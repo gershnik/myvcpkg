@@ -13,7 +13,7 @@
       "port-version": 1
     },
     "modern-uuid": {
-      "baseline": "1.2",
+      "baseline": "1.3",
       "port-version": 0
     },
     "objc-helpers": {
