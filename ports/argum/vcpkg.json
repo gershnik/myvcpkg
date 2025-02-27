@@ -1,6 +1,7 @@
 {
   "name": "argum",
   "version": "2.6",
+  "port-version": 1,
   "description": "Fully-featured, powerful, command line argument parser in C++20.",
   "homepage": "https://github.com/gershnik/argum",
   "license": "BSD-3-Clause",

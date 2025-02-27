@@ -1,7 +1,7 @@
 {
   "name": "libuuid",
   "version": "2.40.4",
-  "port-version": 1,
+  "port-version": 2,
   "description": "Universally unique id library from util-linux.",
   "homepage": "https://github.com/util-linux/util-linux/tree/master/libuuid",
   "license": "BSD-3-Clause",

@@ -1,6 +1,7 @@
 {
   "name": "smjni",
   "version": "3.12",
+  "port-version": 1,
   "description": "A powerful lightweight C++ wrapper for JNI.",
   "homepage": "https://github.com/gershnik/SimpleJNI",
   "license": "Apache-2.0",

@@ -1,6 +1,7 @@
 {
   "name": "modern-uuid",
   "version": "1.3",
+  "port-version": 1,
   "description": "A modern, no-dependencies, portable C++ library for manipulating UUIDs. Fully supports RFC 9562 and RFC 4122.",
   "homepage": "https://github.com/gershnik/modern-uuid",
   "license": "BSD-3-Clause",

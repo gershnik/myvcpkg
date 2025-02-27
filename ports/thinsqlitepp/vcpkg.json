@@ -1,6 +1,7 @@
 {
   "name": "thinsqlitepp",
   "version": "1.5",
+  "port-version": 1,
   "description": "A thin, safe and convenient C++ wrapper for SQLite API.",
   "homepage": "https://github.com/gershnik/thinsqlitepp",
   "license": "BSD-3-Clause",
