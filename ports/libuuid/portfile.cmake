@@ -9,8 +9,8 @@ vcpkg_download_distfile(
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO gershnik/libuuid-cmake
-    REF "v${VERSION}.rev1"
-    SHA512 5ceef1d7bf1f744adeba585e3fee5cfa99bef4af54d0250300b991455743c82884ed0befaa75a51e0080f816ac9292b947932007e1a5c08ca50b5fb4d29dc453
+    REF "v${VERSION}.rev2"
+    SHA512 81da9b0e024d5c0f0a53b7adb785ddd2ee9b1d789f9dcf4504a2fd0e8a99ea93c2805ba15041bd8fa2b1889edbbb42eee0149abad1b1d6d41714ed42ec7c4363
     HEAD_REF master
 )
 
