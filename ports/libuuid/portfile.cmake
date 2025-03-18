@@ -3,14 +3,14 @@ vcpkg_download_distfile(
     UTIL_LINUX_ARCHIVE 
     URLS https://github.com/util-linux/util-linux/archive/v${VERSION}.tar.gz
     FILENAME libuuid.tar.gz
-    SHA512 8e4ea997a9c1978c7bc1b0125b4bb5ab2d26e1eb1cb6a4134a09633af827f19d849d941bc2031af23310c8e5adb8446e487cb13414170b7f502f675dc8d67c12
+    SHA512 b76d2a30522a5c783a3f4558cf29f9d58ddcc1ba71c34d18bf6b300250f6b35d131d9a9ea2ba04df70bea1a6311ad65d60faf21ffd57484840f5e651be991544
 )
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO gershnik/libuuid-cmake
-    REF "v${VERSION}.rev2"
-    SHA512 81da9b0e024d5c0f0a53b7adb785ddd2ee9b1d789f9dcf4504a2fd0e8a99ea93c2805ba15041bd8fa2b1889edbbb42eee0149abad1b1d6d41714ed42ec7c4363
+    REF "v${VERSION}"
+    SHA512 8f395d49564bf3904743ed91cb662b093fd381303ba3f308031af8f24f955a2db29f3f75f39a692a8a72a329e87e302a9d25142114694ca9650fd45506bfb85e
     HEAD_REF master
 )
 
@@ -22,7 +22,7 @@ vcpkg_extract_source_archive(
 
 vcpkg_apply_patches(
     SOURCE_PATH "${UTIL_LINUX_DIR}/libuuid"
-    PATCHES "${SOURCE_PATH}/patches/patch_2.40.diff"
+    PATCHES "${SOURCE_PATH}/patches/patch_${VERSION}.diff"
 )
 
 
