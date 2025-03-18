@@ -9,8 +9,8 @@
       "port-version": 2
     },
     "libuuid": {
-      "baseline": "2.40.4",
-      "port-version": 3
+      "baseline": "2.41",
+      "port-version": 0
     },
     "modern-uuid": {
       "baseline": "1.4",
