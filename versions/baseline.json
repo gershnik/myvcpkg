@@ -5,8 +5,8 @@
       "port-version": 1
     },
     "isptr": {
-      "baseline": "1.6",
-      "port-version": 2
+      "baseline": "1.7",
+      "port-version": 0
     },
     "libuuid": {
       "baseline": "2.41",
