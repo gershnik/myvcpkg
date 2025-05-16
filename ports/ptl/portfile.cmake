@@ -4,9 +4,8 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO gershnik/ptl
     REF "v${VERSION}"
-    SHA512 f5e6a082d15b25fcbc68588bd4b58cf0498f5c124ea4da6082440e2e875ae67bf32cc89f59c9abeacd3e5099aea38e11729c10ad39d6b54f9a4798532d6bf4e4
+    SHA512 e79c693fff89ffc0076527d63be4bb30863d2951fb7272ffdfc671f7146fee63b1ffcf76c2098e8592ba519b53c9bed169f3bd083ea2cc59773d2500e1fa4103
     HEAD_REF master
-    PATCHES "${CMAKE_CURRENT_LIST_DIR}/patch1.patch"
 )
 
 vcpkg_cmake_configure(
