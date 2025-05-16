@@ -10,7 +10,7 @@ To add it to your configuration add this to the `registries` field in your `vcpk
     "kind": "git",
     "reference": "master",
     "repository": "https://github.com/gershnik/myvcpkg",
-    "baseline": "6d43bb529c115a9739ee4060f8927e5b75c2e6b1",
+    "baseline": "6c434391a82a1f4a5039fecd20c2b027da0b84e7",
     "packages": [ 
         "library name 1", 
         "library name 2", 
