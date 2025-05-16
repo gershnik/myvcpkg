@@ -1,7 +1,6 @@
 {
   "name": "sys-string",
-  "version": "3.2",
-  "port-version": 1,
+  "version": "3.3",
   "description": "A family of C++ string classes optimized for interoperability with platform-native string types.",
   "homepage": "https://github.com/gershnik/sys_string",
   "license": "BSD-3-Clause",
