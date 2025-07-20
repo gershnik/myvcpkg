@@ -4,7 +4,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO gershnik/sys_string
     REF "v${VERSION}"
-    SHA512 b677e11b62df952da1f1700bc90590c05f15dea6f1a77fbe376d2aae819ed575fb7dfd0b282d4be9167fc86a2bc85bfc54d1f7943fd7e8599095a89c0b8b6dfd
+    SHA512 cff19ca427ce018bdff9c773ca1d6f1cf4f73a90dbc58904d76cb9bfb2166a51fa3dedddcd1828627f1dd08eaa429b0e31b7111b3845d1d702d9308b37e490f4
     HEAD_REF master
 )
 
