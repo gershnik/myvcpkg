@@ -1,6 +1,6 @@
 {
   "name": "ptl",
-  "version": "1.6",
+  "version": "1.7",
   "description": "C++ library for Posix and related calls.",
   "homepage": "https://github.com/gershnik/ptl",
   "license": "BSD-3-Clause",
