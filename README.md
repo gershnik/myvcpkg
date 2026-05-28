@@ -32,7 +32,7 @@ Where available library names are:
     <tbody>
       <tr>
         <td>["argum"](https://github.com/gershnik/argum)</td>
-        <td>Fully-featured, powerful, command line argument parser in C++20.</td>
+        <td>Fully-featured, powerful and simple-to-use C++ command-line argument parser.</td>
       </tr>
       <tr>
         <td>["isptr"](https://github.com/gershnik/intrusive_shared_ptr)</td>
@@ -44,7 +44,7 @@ Where available library names are:
       </tr>
       <tr>
         <td>["modern-uuid"](https://github.com/gershnik/modern-uuid)</td>
-        <td>A modern, no-dependencies, portable C++ library for manipulating UUIDs. Fully supports RFC 9562 and RFC 4122.</td>
+        <td>A modern, no-dependencies, portable C++ library for manipulating UUIDs, ULIDs, NanoIDs and Cuid2s.</td>
       </tr>
       <tr>
         <td>["objc-helpers"](https://github.com/gershnik/objc-helpers)</td>
@@ -52,7 +52,7 @@ Where available library names are:
       </tr>
       <tr>
         <td>["ptl"](https://github.com/gershnik/ptl)</td>
-        <td>C++ library for Posix and related calls.</td>
+        <td>A C++ library wrapping Unix system APIs.</td>
       </tr>
       <tr>
         <td>["smjni"](https://github.com/gershnik/SimpleJNI)</td>
