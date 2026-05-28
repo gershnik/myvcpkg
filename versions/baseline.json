@@ -29,7 +29,7 @@
       "port-version": 0
     },
     "sys-string": {
-      "baseline": "3.8",
+      "baseline": "3.9",
       "port-version": 0
     },
     "thinsqlitepp": {
