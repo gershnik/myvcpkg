@@ -1,0 +1,30 @@
+#! /usr/bin/env -S python3 -u
+
+import os
+import subprocess
+import re
+
+from pathlib import Path
+
+MYPATH = Path(__file__).parent
+ROOT = MYPATH.parent
+
+def main():
+    rev = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, 
+                         stdout=subprocess.PIPE, check=True).stdout.decode('utf-8').strip()
+
+    baseline_pattern = re.compile(r'(^\s+"baseline"\s*:\s*")[a-z0-9]+("\s*,\s*$)', re.DOTALL)
+    lines = []
+    with open(ROOT / 'README.md', 'rt', encoding='utf-8') as readme:
+        for line in readme.readlines():
+            if (m := baseline_pattern.fullmatch(line)):
+                line = m.group(1) + rev + m.group(2)
+            lines.append(line)
+    
+    with open(ROOT / 'README.md', 'wt', encoding='utf-8') as readme:
+        readme.writelines(lines)
+    subprocess.run(['git', 'add', ROOT / 'README.md'], cwd=ROOT, check=True)
+    subprocess.run(['git', 'commit', '-m', 'Updating README'], cwd=ROOT, check=True)
+
+if __name__ == '__main__':
+    main()

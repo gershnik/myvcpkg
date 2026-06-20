@@ -4,7 +4,6 @@ import os
 import sys
 import argparse
 import subprocess
-import re
 
 from pathlib import Path
 
@@ -34,6 +33,10 @@ def main():
     if not is_anything_staged():
         print("Nothing to update")
         sys.exit(0)
+
+    cur_branch = subprocess.run(['git', 'symbolic-ref', '--short', 'HEAD'], cwd=ROOT, 
+                         stdout=subprocess.PIPE, check=True).stdout.decode('utf-8').strip()
+    subprocess.run(['git', 'switch', '-c', 'update-work'], cwd=ROOT, check=True)
     subprocess.run(['git', 'commit', '-m', message], cwd=ROOT, check=True)
     subprocess.run([Path(VCPKG_ROOT) / 'vcpkg', 
                     '--x-builtin-ports-root=./ports', 
@@ -41,22 +44,11 @@ def main():
                     'x-add-version', '--all', '--verbose'], cwd=ROOT, check=True)
     subprocess.run(['git', 'add', 'versions/.'], cwd=ROOT, check=True)
     subprocess.run(['git', 'commit', '-m', 'Updating versions'], cwd=ROOT, check=True)
+    subprocess.run(['git', 'switch', cur_branch], cwd=ROOT, check=True)
+    subprocess.run(['git', 'merge', '--squash', 'update-work'], cwd=ROOT, check=True)
+    subprocess.run(['git', 'commit', '-m', message], cwd=ROOT, check=True)
+    subprocess.run(['git', 'branch', '-D', 'update-work'], cwd=ROOT, check=True)
 
-    rev = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, 
-                         stdout=subprocess.PIPE, check=True).stdout.decode('utf-8').strip()
-
-    baseline_pattern = re.compile(r'(^\s+"baseline"\s*:\s*")[a-z0-9]+("\s*,\s*$)', re.DOTALL)
-    lines = []
-    with open(ROOT / 'README.md', 'rt', encoding='utf-8') as readme:
-        for line in readme.readlines():
-            if (m := baseline_pattern.fullmatch(line)):
-                line = m.group(1) + rev + m.group(2)
-            lines.append(line)
-    
-    with open(ROOT / 'README.md', 'wt', encoding='utf-8') as readme:
-        readme.writelines(lines)
-    subprocess.run(['git', 'add', ROOT / 'README.md'], cwd=ROOT, check=True)
-    subprocess.run(['git', 'commit', '-m', 'Updating README'], cwd=ROOT, check=True)
 
 if __name__ == '__main__':
     main()
