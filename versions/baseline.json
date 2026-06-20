@@ -33,7 +33,7 @@
       "port-version": 0
     },
     "thinsqlitepp": {
-      "baseline": "1.8",
+      "baseline": "1.9",
       "port-version": 0
     }
   }
