@@ -3,7 +3,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO gershnik/modern-uuid
     REF "v${VERSION}"
-    SHA512 2686f61f4054eb8d4753c702a0321fc61b6dc9f47714a4d1133aebd4e2065bdfc626cddcdbed91f5edc6de339b366125514b44634897618e49f6ec4f4aa0e94d
+    SHA512 868b44cfd99cdb5ffae80015a35282ad1db6032b62988407b8fb452b2cd9eca379d8389d1d41d5b47d46441956ca6c059d7fdd29ed1d8dfc9fd5ef6967ff5b15
     HEAD_REF master
 )
 
