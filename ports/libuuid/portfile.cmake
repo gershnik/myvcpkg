@@ -3,14 +3,14 @@ vcpkg_download_distfile(
     UTIL_LINUX_ARCHIVE 
     URLS https://github.com/util-linux/util-linux/archive/v${VERSION}.tar.gz
     FILENAME libuuid-${VERSION}.tar.gz
-    SHA512 5431355f7733b0027ec5820f53d2f5d716674247902b7a5408f7453843aca3d2e84b178f93df20f5bbea3b680574cb9c0a135f329ec73a44fc9867bba78fa54c
+    SHA512 45bc1e2beda3cff8eba03b3c84588087052e53f594c8e2b2afda46fecf67855783feeed08953a607314c7845b1a35966f0fdb1cd668bcc41a3cf00e2f6fe8300
 )
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO gershnik/libuuid-cmake
     REF "v${VERSION}"
-    SHA512 e447627f8a8a306df68f24a5b80166615403ecef1e6a1196b24a83fe31ecc5b76b056a920ab7a7c7f5f04c394c3caea962893b9a4ba5612c8bfe3bb95adf0c88
+    SHA512 657782c0be0c3fc2d5c61c0ae0119ab9f0e58afde329188a76ba5abb24da38ef3059b606402760b36a3afe0317a26e7e07044e898519d6d90724c51d0b8beb4f
     HEAD_REF master
 )
 
