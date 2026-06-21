@@ -17,7 +17,7 @@
       "port-version": 0
     },
     "objc-helpers": {
-      "baseline": "3.6",
+      "baseline": "3.7.0",
       "port-version": 0
     },
     "ptl": {

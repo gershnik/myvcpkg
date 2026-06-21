@@ -1,14 +1,20 @@
+set(VCPKG_BUILD_TYPE release) # Header-only library
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO gershnik/objc-helpers
     REF "v${VERSION}"
-    SHA512 47101bbc1353fe0acf007f9c3a0208e54bca87f2bd68e266e7c1bc9b2f676daf31fac030cd94cb688422229bceed74139604dac15ffc24f56dcc4334976fbfcf
+    SHA512 e8bbd111d7bccf84423288d8d08759ae03b2c49549a4170cb9cfbe5575476d280730f479ea8bb31f5ffaf244dd02b0cb4d3357551113116a982646fd40f1a81e
     HEAD_REF master
 )
 
-file(COPY "${SOURCE_PATH}/include" DESTINATION "${CURRENT_PACKAGES_DIR}")
+vcpkg_cmake_configure(
+    SOURCE_PATH "${SOURCE_PATH}"
+    OPTIONS 
+        ""
+)
 
-
+vcpkg_cmake_install()
+vcpkg_cmake_config_fixup(PACKAGE_NAME objc-helpers)
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")
 file(COPY "${CMAKE_CURRENT_LIST_DIR}/usage" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}")
